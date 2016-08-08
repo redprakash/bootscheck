@@ -7,9 +7,24 @@
 			background-color: red;
 		}
 	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script>
+		$(window).resize(function(){
+
+		    $('.logo').css({
+		        position:'absolute',
+		        left: ($(window).width() - $('.logo').outerWidth())/2,
+		        top: ($(window).height() - $('.logo').outerHeight())/2
+		    });
+
+		});
+
+		// To initially run the function:
+		$(window).resize();
+	</script>
 </head>
 <body>
-<img src="logo.svg">
+<img src="logo.svg" class="logo">
 
 </body>
 </html>
